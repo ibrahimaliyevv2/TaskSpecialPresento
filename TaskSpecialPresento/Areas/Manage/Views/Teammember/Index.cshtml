@@ -1,0 +1,47 @@
+﻿@model List<Teammember>
+@{ 
+    int count = 0;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">No:</th>
+                        <th scope="col">FullName</th>
+                        <th scope="col">Position</th>
+                        <th scope="col">Twitter Username</th>
+                        <th scope="col">Instagram Username</th>
+                        <th scope="col">Facebook Username</th>
+                        <th scope="col">LinkedIn Username</th>
+                        <th scope="col">Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Teammember tm in Model)
+                    {
+                        count++;
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>@count</td>
+                        <td>@tm.FullName</td>
+                        <td>@tm.Position</td>
+                        <td>@tm.TwitterUsername</td>
+                        <td>@tm.InstagramUsername</td>
+                        <td>@tm.FacebookUsername</td>
+                        <td>@tm.LinkedinUsername</td>
+                        <td>
+                            <img src="~/main/assets/img/@tm.ImageName" alt="Alternate Text" />
+                        </td>
+                    </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
